@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+}
+
+.root {
+    height: 100vh;
+    background-color:#95afc0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Adjustments for mobile devices */
+@media (max-width: 768px) {
+    .container {
+      padding: 10px;
+    }
+  }
