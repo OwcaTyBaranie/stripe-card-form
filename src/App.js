@@ -1,5 +1,5 @@
 import React from 'react';
-import StripeCardForm from './Components/StripeCardForm';
+import StripeCardForm from './Components/StripeCardForm/StripeCardForm';
 
 const App = () => (
   <div className="App">

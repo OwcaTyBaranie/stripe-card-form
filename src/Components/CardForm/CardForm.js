@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js'; // Import CardElement
-import CountrySelector from './CountrySelector';
-import CardholderName from './CardholderName';
-import CardInput from './CardInput';
-import SubmitButton from './SubmitButton';
-
+import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js';
+import CountrySelector from '../CountrySelector/CountrySelector';
+import CardholderName from '../CardholderName/CardholderName';
+import CardInput from '../CardInput/CardInput';
+import SubmitButton from '../SubmitButton/SubmitButton';
 const CardForm = () => {
   const [country, setCountry] = useState('PL');
   const [cardholderName, setCardholderName] = useState('Jan Kowalski');
