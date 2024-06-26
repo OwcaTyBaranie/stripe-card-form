@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
-import { Elements, CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
-
-const stripePromise = loadStripe('your-publishable-key-here');
+import { useStripe, useElements, CardElement } from '@stripe/react-stripe-js'; // Import CardElement
+import CountrySelector from './CountrySelector';
+import CardholderName from './CardholderName';
+import CardInput from './CardInput';
+import SubmitButton from './SubmitButton';
 
 const CardForm = () => {
   const [country, setCountry] = useState('PL');
@@ -42,32 +43,12 @@ const CardForm = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <label>
-        Country:
-        <select value={country} onChange={handleCountryChange}>
-          <option value="PL">Polska</option>
-          <option value="US">USA</option>
-        </select>
-      </label>
-      <br />
-      <label>
-        Cardholder Name:
-        <input type="text" value={cardholderName} readOnly />
-      </label>
-      <br />
-      <CardElement />
-      <br />
-      <button type="submit" disabled={!stripe}>
-        Submit
-      </button>
+      <CountrySelector country={country} handleCountryChange={handleCountryChange} />
+      <CardholderName cardholderName={cardholderName} />
+      <CardInput />
+      <SubmitButton disabled={!stripe} />
     </form>
   );
 };
 
-const StripeCardForm = () => (
-  <Elements stripe={stripePromise}>
-    <CardForm />
-  </Elements>
-);
-
-export default StripeCardForm;
+export default CardForm;
