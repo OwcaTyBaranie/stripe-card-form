@@ -1,8 +1,8 @@
 import React from 'react';
-import './SubmitButton.module.scss'
+import styles from './SubmitButton.module.scss'
 
 const SubmitButton = ({ disabled }) => (
-  <button type="submit" disabled={disabled}>
+  <button type="submit" className={styles.submitButton} disabled={disabled}>
     Submit
   </button>
 );
