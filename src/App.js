@@ -1,25 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import StripeCardForm from './Components/CardForm';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+  <div className="App">
+    <h1>Credit Card Form</h1>
+    <StripeCardForm />
+  </div>
+);
 
 export default App;
+
