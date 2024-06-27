@@ -1,10 +1,18 @@
-body {
-    margin: 0;
+/* reset.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+html, body {
+  height: 100%;
+}
+
 
 .root {
     height: 100vh;
-    background-color:#95afc0;
+    background-color: #a55eea;
     display: flex;
     flex-direction: column;
 }
