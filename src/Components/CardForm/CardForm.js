@@ -42,13 +42,15 @@ const CardForm = () => {
   };
 
   return (
-    <div className={styles.formcontainer}>
+    <div className={styles.formcontainer} >
+      <div className={styles.cardform}>
     <form onSubmit={handleSubmit}>
       <CountrySelector country={country} handleCountryChange={handleCountryChange} />
       <CardholderName cardholderName={cardholderName} />
       <CardInput />
       <SubmitButton disabled={!stripe} />
     </form>
+    </div>
     </div>
   );
 };
