@@ -4,6 +4,7 @@ import CountrySelector from '../CountrySelector/CountrySelector';
 import CardholderName from '../CardholderName/CardholderName';
 import CardInput from '../CardInput/CardInput';
 import SubmitButton from '../SubmitButton/SubmitButton';
+import styles from './CardForm.module.scss'
 const CardForm = () => {
   const [country, setCountry] = useState('PL');
   const [cardholderName, setCardholderName] = useState('Jan Kowalski');
@@ -41,12 +42,14 @@ const CardForm = () => {
   };
 
   return (
+    <div className={styles.formcontainer}>
     <form onSubmit={handleSubmit}>
       <CountrySelector country={country} handleCountryChange={handleCountryChange} />
       <CardholderName cardholderName={cardholderName} />
       <CardInput />
       <SubmitButton disabled={!stripe} />
     </form>
+    </div>
   );
 };
 
