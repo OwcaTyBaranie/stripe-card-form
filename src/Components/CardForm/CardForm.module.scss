@@ -13,7 +13,22 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
   }
+  .cardform label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .cardform select,
+.cardform input {
+  width: 100%;
+  padding: 12px; /* Zwiększone padding */
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1.1rem; /* Większy rozmiar czcionki */
+}
 
 select {
     font-size: large;

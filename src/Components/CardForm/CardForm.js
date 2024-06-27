@@ -40,7 +40,7 @@ const CardForm = () => {
       console.log('PaymentMethod created successfully!', paymentMethod);
     }
   };
-
+ 
   return (
     <div className={styles.formcontainer} >
       <div className={styles.cardform}>
