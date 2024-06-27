@@ -4,7 +4,8 @@
     align-items: center;
     min-height: 100vh; /* Full viewport height */
     padding: 20px;
-    background-color: #d1d8e0 /* Light background color */
+    background-color: #d1d8e0; /* Light background color */
+    font-size: 30px;
   }
 
   .cardform {
@@ -13,3 +14,16 @@
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
+
+select {
+    font-size: large;
+}
+
+input {
+    font-size: large;
+}
+
+label {
+    padding-top: 10px;
+}
+
